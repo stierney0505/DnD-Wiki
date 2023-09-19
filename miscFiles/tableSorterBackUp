@@ -1,0 +1,37 @@
+<table id="spellsTable" class="table table-dark">
+            <thead>
+                <th>Name</th>
+                <th>School</th>
+                <th>Damage</th>
+                <th>Range</th>
+                <th>Duration</th>
+                <th>Cast Time</th>
+                <th>Level</th>
+                <th>Components</th>
+                <th>Source</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Fireball</td>
+                    <td>Evocation</td>
+                    <td>8d6</td>
+                    <td>150 feet (20-foot radius)</td>
+                    <td>Instant</td>
+                    <td>1 Action</td>
+                    <td>3rd</td>
+                    <td>V, S, M (a tiny ball of bat guano and sulfur)</td>
+                    <td>PH</td>
+                </tr>
+                <tr>
+                    <td>Magic Missile</td>
+                    <td>Evocation</td>
+                    <td>1d4+1</td>
+                    <td>120 feet</td>
+                    <td>Instant</td>
+                    <td>1 Action</td>
+                    <td>1st</td>
+                    <td>V, S</td>
+                    <td>PH</td>
+                </tr>
+            </tbody>
+        </table>

@@ -1,0 +1,92 @@
+<%
+    const classes = ["Artificer", "Bard","Cleric", "Druid", "Paladin", "Ranger", "Sorcerer", "Warlock", "Wizard"];
+    const levels = ["Cantrips", "1st","2nd", "3rd", "4th", "5th", "6th", "7th", "8th", "9th"];
+    const schools = ["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"];
+    const spellUrl = "http://127.0.0.22:3000/spells/filter:"
+ %>
+
+
+<div class="buttons header">
+    <div class="dropdown headerItem">
+        <button type="button" class="btn btn-primary">Classes</button>
+        <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+            data-bs-toggle="dropdown"></button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">Casters</a></li>
+            <li><a class="dropdown-item" href="#">HalfCasters</a></li>
+            <li><a class="dropdown-item" href="#">Non-Casters</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown headerItem">
+        <button type="button" class="btn btn-secondary">Feats</button>
+    </div>
+
+    <div class="dropdown headerItem">
+        <button type="button" class="btn btn-secondary">Items</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false">
+        </button>
+        <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">By Rarity</a></li>
+            <li><a class="dropdown-item" href="#">By Type</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown headerItem">
+        <button type="button" class="btn btn-secondary">Monsters</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false"></button>
+        <ul class="dropdown-menu drop">
+            <li><a class="dropdown-item" href="#">By Location</a></li>
+            <li><a class="dropdown-item" href="#">By Size</a></li>
+            <li><a class="dropdown-item" href="#">By Type</a></li>
+        </ul>
+    </div>
+
+    <div class="dropdown headerItem">
+        <button type="button" class="btn btn-secondary">Races</button>
+    </div>
+
+    <div class="dropdown headerItem">
+        <button type="button" class="btn btn-secondary">Spells</button>
+        <button type="button" class="btn btn-secondary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"
+            aria-expanded="false"></button>
+        <ul class="dropdown-menu">
+            <li class="dropdown-submenu">
+                <a class="dropdown-item test" href="#">By Class >><span class="caret"></span></a>
+                <ul class="dropdown-menu nested-submenu">
+                    <% for (let i = 0; i < classes.length; i++) { %>
+                        <li><a class="dropdown-item" target="_self" href="<%= spellUrl + classes[i]%>"><%= classes[i]%></a></li>
+                    <% } %>
+                </ul>
+            </li>
+            <li class="dropdown-submenu">
+                <a class="dropdown-item test" href="#">By Level >><span class="caret"></span></a>
+                <ul class="dropdown-menu nested-submenu">
+                    <% for (let i = 0; i < levels.length; i++) { %>
+                        <li><a class="dropdown-item" target="_self" href="<%= spellUrl + levels[i]%>"><%= levels[i]%></a></li>
+                    <% } %>
+                </ul>
+            </li>
+            <li class="dropdown-submenu">
+                <a class="dropdown-item test" href="#">By School >><span class="caret"></span></a>
+                <ul class="dropdown-menu nested-submenu">
+                    <% for (let i = 0; i < schools.length; i++) { %>
+                        <li><a class="dropdown-item" target="_self" href="<%= spellUrl + schools[i]%>"><%= schools[i]%></a></li>
+                    <% } %>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.dropdown-submenu a').on("click", function (e) {
+            $('.nested-submenu').not($(this).next('.nested-submenu')).hide();
+            $(this).next('ul').toggle();
+            e.stopPropagation();
+        });
+    });
+</script>

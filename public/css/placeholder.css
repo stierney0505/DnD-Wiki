@@ -1,0 +1,21 @@
+.header {
+    margin: auto;
+    width: 50%;
+    border: 3px solid green;
+    padding: 10px;
+    display: flex;
+}
+
+.headerItem {
+    margin-right: 20px;
+}
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0;
+    left: 100%;
+    margin-top: -1px;
+}

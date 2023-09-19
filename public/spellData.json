@@ -1,0 +1,73 @@
+{
+    "headers": [
+        "Name",
+        "School",
+        "Damage",
+        "Range",
+        "Duration",
+        "Cast Time",
+        "Level",
+        "Components",
+        "Source"
+    ],
+    "spells": [
+        {
+            "Name": "Fireball",
+            "School": "Evocation",
+            "Cast Time": "1 action",
+            "Range": "150 feet",
+            "Duration": "Instantaneous",
+            "Damage": "8d6",
+            "Level": 3,
+            "Components": [
+                "V",
+                "S",
+                "M (a tiny ball of bat guano and sulfur)"
+            ],
+            "Classes": [
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "A bright streak flashes from your pointing finger to a point you choose within Range and then blossoms with a low roar into an explosion of flame."
+        },
+        {
+            "Name": "Healing Word",
+            "School": "Evocation",
+            "Cast Time": "1 bonus action",
+            "Range": "60 feet",
+            "Duration": "Instantaneous",
+            "Damage": "N/A",
+            "Level": 1,
+            "Components": [
+                "V"
+            ],
+            "Classes": [
+                "Cleric",
+                "Bard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "A creature of your choice that you can see within Range regains hit points equal to 1d4 + your spellcasting ability modifier."
+        },
+        {
+            "Name": "Mage Armor",
+            "School": "Abjuration",
+            "Cast Time": "1 action",
+            "Range": "Touch",
+            "Duration": "8 hours",
+            "Damage": "N/A",
+            "Level": 1,
+            "Components": [
+                "V",
+                "S",
+                "M (a piece of cured leather)"
+            ],
+            "Classes": [
+                "Wizard",
+                "Sorcerer"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends."
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Spells</title>
+
+    <link rel="stylesheet" href="/css/placeholder.css">
+
+    <!--Jquery for tablesorting-->
+    <script src="/static/jquery/dist/jquery.min.js"></script>
+    <script src="/static/tablesorter/dist/js/jquery.tablesorter.min.js"></script>
+
+    <!--Boostrap & Popper-->
+    <script src="/static/@popperjs/core/dist/umd/popper-base.min.js"></script>
+    <script src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.min.css">
+
+    <script src="/components/simpleSorter.js"></script>
+    <script src="/components/generateTable.js"></script>
+
+    <script>
+        function activateTable() {
+            $('.table').tablesorter();
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch("http://127.0.0.22:3000/spellData.json")
+                .then(response => response.json())
+                .then(data => {
+                    generateDynamicTable(data, activateTable);
+                });
+        });
+    </script>
+</head>
+
+<body>
+    <div><%- include('../components/header.ejs') %></div>
+    <div>Spells</div>
+    <div id="table-container"></div>
+</body>
+
+</html>
