@@ -1,8 +1,9 @@
+<% const schools = ["Abjuration", "Conjuration", "Divination", "Enchantment", "Evocation", "Illusion", "Necromancy", "Transmutation"]; %>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>Spells</title>
+    <title>Spells By School</title>
 
     <link rel="stylesheet" href="/css/placeholder.css">
 
@@ -19,19 +20,33 @@
     <script src="/components/generateTable.js"></script>
 
     <script>
+        let dataPath = "http://127.0.0.22:3000/spellData.json";
+        function changeTable(){
+            modifyTable(dataPath, "School", document.getElementById("schools").value);
+        }
+
         function activateTable() {
             $('.table').tablesorter();
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            generateDynamicTable("http://127.0.0.22:3000/spellHeaders.json", "http://127.0.0.22:3000/spellData.json", activateTable, "main");
+            generateDynamicTable("http://127.0.0.22:3000/spellHeaders.json", dataPath, activateTable, "schools").then((response)=>{
+                changeTable();
+            });
         });
     </script>
 </head>
 
 <body>
     <div><%- include('../components/header.ejs') %></div>
-    <div>Spells</div>
+    <div>Spells By School <br>
+        <label for="schools">Choose a school:</label>
+        <select name="schools" id="schools" onchange="changeTable()">
+            <% for (let i = 0; i < schools.length; i++) { %>
+                <option value="<%=schools[i]%>"><%=schools[i]%></option>
+            <% } %>
+        </select>
+    </div>
     <div id="table-container" style="overflow-y:auto; height: 750px;"></div>
 </body>
 

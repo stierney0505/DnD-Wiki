@@ -7,10 +7,10 @@ function sort(data, header){
     let element;
     switch(data){
         case "Player's Handbook":
-            element = document.createElement('a');
-            element.href = "https://dnd.wizards.com/products/rpg_playershandbook";
-            element.textContent = "PH";
-            element.title = data;
+            element = createLink("PH", "https://dnd.wizards.com/products/rpg_playershandbook", data);
+            break;
+        case "Eberron: Rising from the Last War":
+            element = createLink("ERLW", "https://dnd.wizards.com/products/eberron", data);
             break;
         default: 
             element = document.createTextNode(data)
@@ -18,4 +18,12 @@ function sort(data, header){
     }
 
     return element;
+}
+
+function createLink(content, link, data){
+    let e = document.createElement('a');
+    e.href = link;
+    e.textContent = content;
+    e.title = data;
+    return e;
 }
