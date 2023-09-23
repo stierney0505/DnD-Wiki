@@ -1,24 +1,13 @@
 {
-    "headers": [
-        "Name",
-        "School",
-        "Damage",
-        "Range",
-        "Duration",
-        "Cast Time",
-        "Level",
-        "Components",
-        "Source"
-    ],
-    "spells": [
-        {
+    "spells": {
+        "Fireball": {
             "Name": "Fireball",
             "School": "Evocation",
             "Cast Time": "1 action",
             "Range": "150 feet",
             "Duration": "Instantaneous",
             "Damage": "8d6",
-            "Level": 3,
+            "Level": "3rd",
             "Components": [
                 "V",
                 "S",
@@ -31,43 +20,470 @@
             "Source": "Player's Handbook",
             "Description": "A bright streak flashes from your pointing finger to a point you choose within Range and then blossoms with a low roar into an explosion of flame."
         },
-        {
+        "Healing Word": {
             "Name": "Healing Word",
             "School": "Evocation",
             "Cast Time": "1 bonus action",
             "Range": "60 feet",
             "Duration": "Instantaneous",
             "Damage": "N/A",
-            "Level": 1,
+            "Level": "1st",
             "Components": [
                 "V"
             ],
             "Classes": [
-                "Cleric",
-                "Bard"
+                "Bard",
+                "Cleric"
             ],
             "Source": "Player's Handbook",
             "Description": "A creature of your choice that you can see within Range regains hit points equal to 1d4 + your spellcasting ability modifier."
         },
-        {
+        "Mage Armor": {
             "Name": "Mage Armor",
             "School": "Abjuration",
             "Cast Time": "1 action",
             "Range": "Touch",
             "Duration": "8 hours",
             "Damage": "N/A",
-            "Level": 1,
+            "Level": "1st",
             "Components": [
                 "V",
                 "S",
                 "M (a piece of cured leather)"
             ],
             "Classes": [
-                "Wizard",
-                "Sorcerer"
+                "Sorcerer",
+                "Wizard"
             ],
             "Source": "Player's Handbook",
             "Description": "You touch a willing creature who isn't wearing armor, and a protective magical force surrounds it until the spell ends."
+        },
+        "Lightning Bolt": {
+            "Name": "Lightning Bolt",
+            "School": "Evocation",
+            "Cast Time": "1 action",
+            "Range": "100 feet",
+            "Duration": "Instantaneous",
+            "Damage": "8d6",
+            "Level": "3rd",
+            "Components": [
+                "V",
+                "S",
+                "M (a bit of fur and a rod of amber, crystal, or glass)"
+            ],
+            "Classes": [
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "A stroke of lightning forming a line 100 feet long and 5 feet wide blasts out from you in a direction you choose."
+        },
+        "Cure Wounds": {
+            "Name": "Cure Wounds",
+            "School": "Evocation",
+            "Cast Time": "1 action",
+            "Range": "Touch",
+            "Duration": "Instantaneous",
+            "Damage": "N/A",
+            "Level": "1st",
+            "Components": [
+                "V",
+                "S"
+            ],
+            "Classes": [
+                "Bard",
+                "Cleric",
+                "Druid",
+                "Paladin",
+                "Ranger"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "A creature you touch regains a number of hit points equal to 1d8 + your spellcasting ability modifier."
+        },
+        "Chain Lightning": {
+            "Name": "Chain Lightning",
+            "School": "Evocation",
+            "Cast Time": "1 action",
+            "Range": "150 feet",
+            "Duration": "Instantaneous",
+            "Damage": "10d8",
+            "Level": "6th",
+            "Components": [
+                "V",
+                "S",
+                "M (a bit of fur, a rod of amber, crystal, or glass, and three silver pins)"
+            ],
+            "Classes": [
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You create a bolt of lightning that arcs toward a target of your choice that you can see within range."
+        }, 
+        "Invisibility": {
+            "Name": "Invisibility",
+            "School": "Illusion",
+            "Cast Time": "1 action",
+            "Range": "Touch",
+            "Duration": "1 hour",
+            "Damage": "N/A",
+            "Level": "2nd",
+            "Components": [
+                "V",
+                "S",
+                "M (an eyelash encased in gum arabic)"
+            ],
+            "Classes": [
+                "Bard",
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "A creature you touch becomes invisible until the spell ends."
+        },
+        "Dimension Door": {
+            "Name": "Dimension Door",
+            "School": "Conjuration",
+            "Cast Time": "1 action",
+            "Range": "500 feet",
+            "Duration": "Instantaneous",
+            "Damage": "N/A",
+            "Level": "4th",
+            "Components": [
+                "V"
+            ],
+            "Classes": [
+                "Bard",
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You teleport yourself from your current location to any other spot within range."
+        },
+        "Teleportation Circle": {
+            "Name": "Teleportation Circle",
+            "School": "Conjuration",
+            "Cast Time": "1 minute",
+            "Range": "10 feet",
+            "Duration": "1 round",
+            "Damage": "N/A",
+            "Level": "5th",
+            "Components": [
+                "V",
+                "M (rare chalks and inks infused with precious gems worth 50 gp, which the spell consumes)"
+            ],
+            "Classes": [
+                "Bard",
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "As you cast the spell, you draw a 10-foot-diameter circle on the ground inscribed with sigils that link your location to a permanent teleportation circle."
+        },
+        "True Seeing": {
+            "Name": "True Seeing",
+            "School": "Divination",
+            "Cast Time": "1 action",
+            "Range": "Touch",
+            "Duration": "1 hour",
+            "Damage": "N/A",
+            "Level": "6th",
+            "Components": [
+                "V",
+                "S",
+                "M (an ointment for the eyes that costs 25 gp; is made from mushroom powder, saffron, and fat; and is consumed by the spell)"
+            ],
+            "Classes": [
+                "Bard",
+                "Cleric",
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "This spell gives the willing creature you touch the ability to see things as they actually are."
+        },
+        "Etherealness": {
+            "Name": "Etherealness",
+            "School": "Transmutation",
+            "Cast Time": "1 action",
+            "Range": "Touch",
+            "Duration": "8 hours",
+            "Damage": "N/A",
+            "Level": "7th",
+            "Components": [
+                "V",
+                "S"
+            ],
+            "Classes": [
+                "Cleric",
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You step into the border regions of the Ethereal Plane, in the area where it overlaps with your current plane."
+        },
+        "Power Word Stun": {
+            "Name": "Power Word Stun",
+            "School": "Enchantment",
+            "Cast Time": "1 action",
+            "Range": "60 feet",
+            "Duration": "Instantaneous",
+            "Damage": "N/A",
+            "Level": "8th",
+            "Components": [
+                "V"
+            ],
+            "Classes": [
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You speak a word of power that can overwhelm the mind of one creature you can see within range, leaving it stunned."
+        },
+        "Meteor Swarm": {
+            "Name": "Meteor Swarm",
+            "School": "Evocation",
+            "Cast Time": "1 action",
+            "Range": "1 mile",
+            "Duration": "Instantaneous",
+            "Damage": "20d6",
+            "Level": "9th",
+            "Components": [
+                "V",
+                "S"
+            ],
+            "Classes": [
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "Blazing orbs of fire plummet to the ground at four different points you can see within range. Each creature in a 40-foot-radius sphere centered on each point must make a Dexterity saving throw."
+        },
+        "Mechanical Servant": {
+            "Name": "Mechanical Servant",
+            "School": "Transmutation",
+            "Cast Time": "1 minute",
+            "Range": "30 feet",
+            "Duration": "1 hour",
+            "Damage": "N/A",
+            "Level": "1st",
+            "Components": [
+                "V",
+                "S",
+                "M (a miniature construct model)"
+            ],
+            "Classes": [
+                "Artificer"
+            ],
+            "Source": "Eberron: Rising from the Last War",
+            "Description": "You create a Small construct that has the form of any Medium humanoid. Its statistics are the same in nearly all respects as the Medium humanoid except for the following modifications: its size is Small, it gains a +2 bonus to its Dexterity score, and it has darkvision with a range of 60 feet."
+        },
+        "Arcane Cannon": {
+            "Name": "Arcane Cannon",
+            "School": "Evocation",
+            "Cast Time": "1 action",
+            "Range": "60 feet",
+            "Duration": "1 minute",
+            "Damage": "3d8 force",
+            "Level": "2nd",
+            "Components": [
+                "V",
+                "S",
+                "M (a tiny silver cannonball and a piece of etched copper)"
+            ],
+            "Classes": [
+                "Artificer"
+            ],
+            "Source": "Eberron: Rising from the Last War",
+            "Description": "You create a magical cannon that occupies a 5-foot space on ground you can see within range. The cannon counts as an ally for the purposes of your Infuse Item feature. The cannon is a magical object with AC 18 and 15 hit points. It is immune to poison damage, psychic damage, and all conditions. If it takes any damage, it is destroyed, and the spell ends at the start of your next turn. If the cannon is destroyed, you can recreate it on your turn as a bonus action. The cannon unleashes a blast of energy in a 30-foot cone. Each creature in the area must make a Dexterity saving throw, taking 3d8 force damage on a failed save, or half as much damage on a successful one."
+        },
+        "Mending": {
+            "Name": "Mending",
+            "School": "Transmutation",
+            "Cast Time": "1 minute",
+            "Range": "Touch",
+            "Duration": "Instantaneous",
+            "Damage": "N/A",
+            "Level": "Cantrip",
+            "Components": [
+                "V",
+                "S",
+                "M (two lodestones)"
+            ],
+            "Classes": [
+                "Artificer",
+                "Bard",
+                "Cleric",
+                "Druid",
+                "Sorcerer",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "This spell repairs a single break or tear in an object you touch, such as a broken key, a torn cloak, or a leaking wineskin. As long as the break or tear is no larger than 1 foot in any dimension, you mend it, leaving no trace of the former damage."
+        },
+        "Prestidigitation": {
+            "Name": "Prestidigitation",
+            "School": "Transmutation",
+            "Cast Time": "1 action",
+            "Range": "10 feet",
+            "Duration": "1 hour",
+            "Damage": "N/A",
+            "Level": "Cantrip",
+            "Components": [
+                "V",
+                "S"
+            ],
+            "Classes": [
+                "Bard",
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "This spell is a minor magical trick that novice spellcasters use for practice. You create one of the following magical effects within range: You create an instantaneous, harmless sensory effect, such as a shower of sparks, a puff of wind, faint musical notes, or an odd odor. You instantaneously light or snuff out a candle, a torch, or a small campfire. You instantaneously clean or soil an object no larger than 1 cubic foot. You chill, warm, or flavor up to 1 cubic foot of nonliving material for 1 hour. You make a color, a small mark, or a symbol appear on an object or a surface for 1 hour. You create a nonmagical trinket or an illusory image that can fit in your hand and that lasts until the end of your next turn. "
+        },
+        "Animate Dead": {
+            "Name": "Animate Dead",
+            "School": "Necromancy",
+            "Cast Time": "1 minute",
+            "Range": "10 feet",
+            "Duration": "Instantaneous",
+            "Damage": "N/A",
+            "Level": "3rd",
+            "Components": [
+                "V",
+                "S",
+                "M (a drop of blood, a piece of flesh, and a pinch of bone dust)"
+            ],
+            "Classes": [
+                "Cleric",
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "This spell creates an undead servant. Choose a pile of bones or a corpse of a Medium or Small humanoid within range. Your spell imbues the target with a foul mimicry of life, raising it as an undead creature."
+        },
+        "Gentle Repose": {
+            "Name": "Gentle Repose",
+            "School": "Necromancy",
+            "Cast Time": "1 action",
+            "Range": "Touch",
+            "Duration": "10 days",
+            "Damage": "N/A",
+            "Level": "2nd",
+            "Components": [
+                "V",
+                "S",
+                "M (a pinch of salt and one copper piece placed on each of the corpse's eyes, which must remain there for the duration)"
+            ],
+            "Classes": [
+                "Cleric",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You touch a corpse or other remains. For the duration, the target is protected from decay and can't become undead."
+        },
+        "Ray of Enfeeblement": {
+            "Name": "Ray of Enfeeblement",
+            "School": "Necromancy",
+            "Cast Time": "1 action",
+            "Range": "60 feet",
+            "Duration": "1 minute",
+            "Damage": "N/A",
+            "Level": "2nd",
+            "Components": [
+                "V",
+                "S"
+            ],
+            "Classes": [
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "A black beam of enervating energy springs from your finger toward a creature within range. Make a ranged spell attack against the target."
+        },
+        "Life Transference": {
+            "Name": "Life Transference",
+            "School": "Necromancy",
+            "Cast Time": "1 action",
+            "Range": "30 feet",
+            "Duration": "Instantaneous",
+            "Damage": "Variable",
+            "Level": "3rd",
+            "Components": [
+                "V",
+                "S"
+            ],
+            "Classes": [
+                "Cleric",
+                "Wizard"
+            ],
+            "Source": "Xanathar's Guide to Everything",
+            "Description": "You sacrifice some of your health to mend another creature’s injuries. You take damage equal to half your hit points, and the target regains hit points equal to twice the amount of damage you took."
+        },
+        "Speak with Dead": {
+            "Name": "Speak with Dead",
+            "School": "Necromancy",
+            "Cast Time": "1 action",
+            "Range": "10 feet",
+            "Duration": "10 minutes",
+            "Damage": "N/A",
+            "Level": "3rd",
+            "Components": [
+                "V",
+                "S",
+                "M (burning incense)"
+            ],
+            "Classes": [
+                "Cleric"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You grant the semblance of life and intelligence to a corpse of your choice within range, allowing it to answer the questions you pose. The corpse must still have a mouth and can't be undead."
+        },
+        "Spectral Hand": {
+            "Name": "Spectral Hand",
+            "School": "Necromancy",
+            "Cast Time": "1 action",
+            "Range": "Range of spell",
+            "Duration": "1 minute",
+            "Damage": "N/A",
+            "Level": "2nd",
+            "Components": [
+                "V",
+                "S",
+                "M (a bit of eggshell)"
+            ],
+            "Classes": [
+                "Sorcerer",
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "You create a ghostly, skeletal hand in the space of a creature within range. Make a ranged spell attack against the creature to assail it with the chill of the grave."
+        },
+        "Vampiric Touch": {
+            "Name": "Vampiric Touch",
+            "School": "Necromancy",
+            "Cast Time": "1 action",
+            "Range": "Self",
+            "Duration": "Concentration, up to 1 minute",
+            "Damage": "3d6",
+            "Level": "3rd",
+            "Components": [
+                "V",
+                "S"
+            ],
+            "Classes": [
+                "Warlock",
+                "Wizard"
+            ],
+            "Source": "Player's Handbook",
+            "Description": "The touch of your shadow-wreathed hand can siphon life force from others to heal your wounds. Make a melee spell attack against a creature you can reach."
         }
-    ]
+    }
 }

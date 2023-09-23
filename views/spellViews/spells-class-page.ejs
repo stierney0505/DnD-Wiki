@@ -2,7 +2,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Spells</title>
+    <title><%= theClass %> Spells</title>
 
     <link rel="stylesheet" href="/css/placeholder.css">
 
@@ -19,19 +19,26 @@
     <script src="/components/generateTable.js"></script>
 
     <script>
+        let dataPath = "http://127.0.0.22:3000/spellData.json";
+        function changeTable(){
+            modifyTable(dataPath, "Classes", "<%= theClass %>");
+        }
+
         function activateTable() {
             $('.table').tablesorter();
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            generateDynamicTable("http://127.0.0.22:3000/spellHeaders.json", "http://127.0.0.22:3000/spellData.json", activateTable, "main");
+            generateDynamicTable("http://127.0.0.22:3000/spellHeaders.json", dataPath, activateTable, "classes").then((response)=>{
+                changeTable();
+            });
         });
     </script>
 </head>
 
 <body>
     <div><%- include('../components/header.ejs') %></div>
-    <div>Spells</div>
+    <div><%= theClass %> Spells</div>
     <div id="table-container" style="overflow-y:auto; height: 750px;"></div>
 </body>
 

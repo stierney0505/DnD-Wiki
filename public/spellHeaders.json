@@ -1,0 +1,51 @@
+{
+    "main": [
+        "Name",
+        "School",
+        "Damage",
+        "Range",
+        "Duration",
+        "Cast Time",
+        "Level",
+        "Classes",
+        "Components",
+        "Source"
+    ],
+
+    "levels": [
+        "Name",
+        "School",
+        "Damage",
+        "Range",
+        "Duration",
+        "Cast Time",
+        "Classes",
+        "Components",
+        "Source"
+    ],
+
+    "schools" : [
+        "Name",
+        "Damage",
+        "Range",
+        "Duration",
+        "Cast Time",
+        "Level",
+        "Classes",
+        "Components",
+        "Source"
+    ],
+
+    "classes" : [
+        "Name",
+        "School",
+        "Damage",
+        "Range",
+        "Duration",
+        "Cast Time",
+        "Level",
+        "Components",
+        "Source"
+    ]
+    
+}
