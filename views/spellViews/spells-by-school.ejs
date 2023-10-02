@@ -20,7 +20,7 @@
     <script src="/components/generateTable.js"></script>
 
     <script>
-        let dataPath = "http://127.0.0.22:3000/spellData.json";
+        let dataPath = "/spellData.json";
         function changeTable(){
             modifyTable(dataPath, "School", document.getElementById("schools").value);
         }
@@ -30,7 +30,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            generateDynamicTable("http://127.0.0.22:3000/spellHeaders.json", dataPath, activateTable, "schools").then((response)=>{
+            generateDynamicTable("/spellHeaders.json", dataPath, activateTable, "schools").then((response)=>{
                 changeTable();
             });
         });

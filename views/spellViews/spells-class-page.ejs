@@ -19,7 +19,7 @@
     <script src="/components/generateTable.js"></script>
 
     <script>
-        let dataPath = "http://127.0.0.22:3000/spellData.json";
+        let dataPath = "/spellData.json";
         function changeTable(){
             modifyTable(dataPath, "Classes", "<%= theClass %>");
         }
@@ -29,7 +29,7 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            generateDynamicTable("http://127.0.0.22:3000/spellHeaders.json", dataPath, activateTable, "classes").then((response)=>{
+            generateDynamicTable("/spellHeaders.json", dataPath, activateTable, "classes").then((response)=>{
                 changeTable();
             });
         });
