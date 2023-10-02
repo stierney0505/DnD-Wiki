@@ -3,7 +3,7 @@ const path = require('path');
 const spell_routes = require('./router/spells.js').spell_router;
 
 const app = express();
-const port = 3000;
+const port = 5000;
 
 //Starts server on port
 app.listen(port, (error) => {
